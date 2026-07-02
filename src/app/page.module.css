@@ -1,142 +1,236 @@
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
-  --text-primary: #000;
-  --text-secondary: #666;
+.header {
+    width: 100%;
+    padding: 0 20px;
 
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
 }
 
-.main {
-  display: flex;
-  flex: 1;
-  width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+.logo {
+    width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 24px;
+.temaButton {
+    border-radius: 25px;
+    border: solid 1px #B2987D;
+    font-size: 20px;
+    padding: 10px 20px;
+
 }
 
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
+.container_banner {
+    width: 100%;
+    height: 30vh;
+    background-image: url("/banner.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
+.container_texto {
+    width: 900px;
+    height: 60vh;
+    margin: 0 auto;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+
 }
 
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
+.container_texto h1 {
+    font-size: 40px;
+
+
 }
 
-.ctas {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
+.container_texto h2 {
+    font-size: 18px;
+
 }
 
-.ctas a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
+.container_texto p {
+    font-size: 18px;
+    line-height: 30px;
+
 }
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
+.main .assinatura {
+    font-family: "Great Vibes", cursive;
+    font-size: 50px;
+    color: #B2987D;
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 20px;
 }
 
-a.secondary {
-  border-color: var(--button-secondary-border);
+.dark_mode {
+    background-color: black;
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
+.dark_mode .logo img {
+    filter: invert(1) brightness(2);
 }
 
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
-
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
-  }
+.dark_mode .main h1 {
+    color: white;
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+.dark_mode .main h2 {
+    color: white;
+}
 
-  .page {
-    --background: #000;
-    --foreground: #000;
+.dark_mode .main p {
+    color: white;
+}
 
-    --text-primary: #ededed;
-    --text-secondary: #999;
+.dark_mode .temaButton {
+    border-radius: 25px;
+    border: solid 1px #B2987D;
+    font-size: 20px;
+    padding: 10px 20px;
+    color: white;
+    background-color: black;
+}
 
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
-  }
+.dark_mode .main .assinatura {
+    font-family: "Great Vibes", cursive;
+    font-size: 50px;
+    color: #B2987D;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.light_mode {
+    background-color: white;
+}
+
+.light_mode .main h1 {
+    color: black;
+}
+
+.light_mode .main h2 {
+    color: black;
+}
+
+.light_mode .main p {
+    color: black;
+}
+
+.light_mode .main .assinatura {
+    font-family: "Great Vibes", cursive;
+    font-size: 50px;
+    color: #B2987D;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.light_mode .temaButton {
+    border-radius: 25px;
+    border: solid 1px #B2987D;
+    font-size: 20px;
+    padding: 10px 20px;
+    color: black;
+    background-color: white;
+}
+
+@media (max-width: 1024px) {
+    .logo {
+        width: 100%;
+        max-width: 1024px;
+    }
+
+    .container_texto {
+        width: 90%;
+        max-width: 900px;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 16px;
+    }
+
+    .logo img {
+        width: 80px;
+        height: auto;
+    }
+
+    .temaButton {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    .container_banner {
+        height: 24vh;
+    }
+
+    .container_texto {
+        width: 92%;
+        gap: 24px;
+        padding: 20px 12px;
+    }
+
+    .container_texto h1 {
+        font-size: 34px;
+    }
+
+    .container_texto h2,
+    .container_texto p {
+        font-size: 17px;
+        line-height: 28px;
+    }
+
+    .main .assinatura,
+    .dark_mode .main .assinatura,
+    .light_mode .main .assinatura {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 425px) {
+    .header {
+        padding: 0 12px;
+    }
+
+    .logo img {
+        width: 70px;
+    }
+
+    .temaButton {
+        font-size: 16px;
+        padding: 8px 14px;
+    }
+
+    .container_banner {
+        height: 20vh;
+    }
+
+    .container_texto {
+        width: 100%;
+        gap: 18px;
+        padding: 16px 10px 24px;
+    }
+
+    .container_texto h1 {
+        font-size: 28px;
+    }
+
+    .container_texto h2,
+    .container_texto p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .main .assinatura,
+    .dark_mode .main .assinatura,
+    .light_mode .main .assinatura {
+        font-size: 38px;
+        margin-top: 12px;
+    }
 }
